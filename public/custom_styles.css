@@ -1,0 +1,14 @@
+.card img{
+	max-width: 100%;
+}
+textarea {
+	resize: none;
+}
+label {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#calendar h2 {
+	font-size: 20px;
+}

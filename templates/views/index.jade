@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block content
+	.container
+		.row#container
+			each event in sportevents
+				.col-md-4
+					.card
+						img.card-img-top(src="#{event.category.image.url}", alt="Card image cap")
+						.card-block
+							h4.card-title #{event.header}
+							p.card-text !{event.description.html}
+							a.btn.btn-primary(href='/#{event.id}') Подробнее
+block js
+	script(src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js")
+	script(src="custom_scripts.js")

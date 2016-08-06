@@ -1,0 +1,35 @@
+extends ../layouts/default
+block css
+	link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.css")
+	link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.print.css", media="print")
+block content
+	.container
+		.row
+			.col-md-4
+				form(disabled="true")
+					.form-group
+						label(for="category") Категория
+						input.form-control(id="category", value="#{sportevent.category.name}", aria-describedby="event category")
+					.form-group
+						label(for="header") Название
+						input.form-control(id="header", value="#{sportevent.header}", aria-describedby="event header")
+					.form-group
+						label(for="description") Описание
+						div.form-control(id="description", aria-describedby="event description") !{sportevent.description.html}
+					.form-group
+						label(for="personMinCount") Минимальное кол-во человек
+						input.form-control(id="personMinCount", value="#{sportevent.personMinCount}", aria-describedby="event personMinCount")
+					.form-group
+						label(for="personMaxCount") Максимальное кол-во человек
+						input.form-control(id="personMaxCount", value="#{sportevent.personMaxCount}", aria-describedby="event personMaxCount")
+					.form-group
+						label(for="costPerPerson") Цена на человека
+						input.form-control(id="costPerPerson", value="#{sportevent.costPerPerson} р.", aria-describedby="event costPerPerson")
+			.col-md-8
+				#calendar
+
+
+block js
+	script(src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.js")
+	script(src="event.js")
+	
