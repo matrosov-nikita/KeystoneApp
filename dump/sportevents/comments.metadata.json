@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"sportevents.comments"},{"v":1,"key":{"trainer":1},"name":"trainer_1","ns":"sportevents.comments","background":true,"safe":null}]}
