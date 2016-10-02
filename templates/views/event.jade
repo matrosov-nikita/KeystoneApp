@@ -31,5 +31,8 @@ block content
 
 block js
 	script(src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.js")
-	script(src="event.js")
+	script(src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/lang/ru.js")
+	script(src="src/event.js")
+	script.
+		window.category = !{JSON.stringify(sportevent.category)}
 	

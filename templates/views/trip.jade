@@ -1,0 +1,15 @@
+extends ../layouts/default
+block css
+	link(rel="stylesheet", href="react-big-calendar.css")
+block content
+	.container#trip
+		.row
+			#userTrip
+block js
+	//TODO:: remove hack after remake page with big calendar using react
+	script.
+		window.trips = !{JSON.stringify(trips)}
+		window.date = !{JSON.stringify(date)}
+		window.category = !{JSON.stringify(category)}
+	script(src="react/components/bundle.js") 
+

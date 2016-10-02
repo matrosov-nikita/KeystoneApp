@@ -12,3 +12,17 @@ label {
 #calendar h2 {
 	font-size: 20px;
 }
+
+#trip .title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}
+.btn_wrapper {
+	text-align: center
+}
+
+#tripForm {
+	text-align: center;
+	padding: 20px 0;
+}

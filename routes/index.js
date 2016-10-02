@@ -35,8 +35,13 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.all('/contact', routes.views.contact);
-	app.get('/', routes.views.SportEvent.getAllEvents);
+	app.post('/trip', routes.views.trip.sendTrip);
+	app.get('/trip', routes.views.trip.createTrip);
+	app.get('/trainers', routes.views.SportEvent.getTrainers);
+	app.get('/category', routes.views.SportEvent.getEventsByCategory);
 	app.get('/:id', routes.views.SportEvent.getEventById);
+	app.get('/', routes.views.SportEvent.getAllEvents);
+
 
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

@@ -10,21 +10,28 @@ Trip.add({
         required: true,
         default: 0
 	},
-	dateFrom: {
-		type: Types.Date, 
+	startDate: {
+		type: Types.Datetime, 
 		required: true, 
         default: Date.now
 	},
 
-    dateTill: {
-        type: Types.Date,
+    finishDate: {
+        type: Types.Datetime,
         required: true, 
         default: Date.now
     },
 
     trainer: {
         type: Types.Relationship,
-        ref: 'User'
+        ref: 'User',
+        default: null
+    },
+
+    category : {
+        type: Types.Relationship,
+        ref : 'SportCategory',
+        default: null
     },
 
     extraInfo: {
@@ -33,5 +40,5 @@ Trip.add({
     }
 });
 
-Trip.defaultColumns='peopleAmount, dateFrom, dateTill, trainer';
+Trip.defaultColumns='peopleAmount, startDate, finishDate, trainer';
 Trip.register();
